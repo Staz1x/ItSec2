@@ -68,7 +68,7 @@ public class ItSec2 {
             tries++;
         }
 
-        return "We tried " + tries + " solutions";
+        return "Decryption took " + tries + " solutions";
     }
 
 }
