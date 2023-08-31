@@ -7,15 +7,17 @@ public class ItSec2 {
 
     public static void main(String[] args) {
 
-        String password = "gers";
+        String password = "Greg";
         String encryptedPassword = encrypt(password);
-
-        //int tries = decrypter(password, encryptedPassword);
 
         System.out.println("Password = "+ password);
         System.out.println("Encrypted password = " + encryptedPassword);
-        //System.out.println("It took " + tries + " tries to find");
-        System.out.println(decrypter(password, encryptedPassword));
+
+        double startTime = System.currentTimeMillis();
+        System.out.print(decrypter(password, encryptedPassword));
+        double endTime = System.currentTimeMillis();
+
+        System.out.println(" in " + ((endTime - startTime)/1000) + " seconds");
 
     }
 
@@ -66,7 +68,7 @@ public class ItSec2 {
             tries++;
         }
 
-        return "It took " + tries + " tries to find it";
+        return "We tried " + tries + " solutions";
     }
 
 }
